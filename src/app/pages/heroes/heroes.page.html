@@ -1,13 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>heroes</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()" fill="clear" class="dark-accent">
+        <ion-icon slot="start" name="arrow-back"></ion-icon>
+        Atrás
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Héroes</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">heroes</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-2xl font-bold mb-6 text-center dark-accent">Lista de Héroes</h2>
+    
+    <ion-list>
+      <ion-item *ngFor="let hero of heroes" class="mb-4 shadow-sm rounded-lg">
+        <ion-label>
+          <h3 class="font-semibold text-lg dark-text">{{ hero.name }}</h3>
+          <p class="dark-secondary-text">{{ hero.power }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

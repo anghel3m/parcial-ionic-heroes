@@ -1,0 +1,85 @@
+/* Color theme for dark mode */
+:root {
+  --dark-bg: #121212;         // Fondo principal oscuro
+  --dark-surface: #1e1e1e;    // Superficies/components
+  --dark-text: #e0e0e0;       // Texto principal
+  --dark-secondary-text: #a0a0a0; // Texto secundario
+  --dark-border: #333333;     // Bordes
+  --dark-accent: #bb86fc;     // Color de acento
+}
+
+/* Aplicar tema oscuro */
+ion-content {
+  --background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+ion-toolbar {
+  --background: var(--dark-surface);
+  --border-color: var(--dark-border);
+  --color: var(--dark-text);
+}
+
+ion-item {
+  --background: var(--dark-surface);
+  --border-radius: 0.5rem;
+  --border-color: var(--dark-border);
+  --padding-start: 1rem;
+  --padding-end: 1rem;
+  --inner-padding-end: 0;
+  --color: var(--dark-text);
+  margin-bottom: 1rem;
+}
+
+/* Clases de utilidad para modo oscuro */
+.dark-text {
+  color: var(--dark-text);
+}
+
+.dark-secondary-text {
+  color: var(--dark-secondary-text);
+}
+
+.dark-accent {
+  color: var(--dark-accent);
+}
+
+.dark-bg {
+  background: var(--dark-bg);
+}
+
+/* Resto de clases utilitarias */
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
