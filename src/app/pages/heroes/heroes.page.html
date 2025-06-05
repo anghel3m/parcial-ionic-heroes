@@ -13,13 +13,9 @@
 <ion-content [fullscreen]="true" class="ion-padding">
   <div class="max-w-2xl mx-auto">
     <h2 class="text-2xl font-bold mb-6 text-center dark-accent">Lista de Héroes</h2>
-    
+
     <ion-list>
-      <ion-item 
-        *ngFor="let hero of heroes" 
-        class="mb-4 shadow-sm rounded-lg"
-        (click)="showHeroImage(hero)"
-        button>
+      <ion-item *ngFor="let hero of heroes" class="mb-4 shadow-sm rounded-lg" (click)="showHeroImage(hero)" button>
         <ion-label>
           <h3 class="font-semibold text-lg dark-text">{{ hero.name }}</h3>
           <p class="dark-secondary-text">{{ hero.power }}</p>

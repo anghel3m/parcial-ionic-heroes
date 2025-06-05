@@ -12,7 +12,7 @@ import {
   IonItem,
   IonLabel, 
   IonButtons,
-  ModalController // Nuevo import
+  ModalController 
 } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import { addIcons } from 'ionicons';
@@ -116,7 +116,7 @@ heroes = [
 
   constructor(
     private router: Router,
-    private modalCtrl: ModalController // Inyectar ModalController
+    private modalCtrl: ModalController 
   ) {
     addIcons({ arrowBack });
   }

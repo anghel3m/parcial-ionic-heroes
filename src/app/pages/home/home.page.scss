@@ -1,89 +1,84 @@
-/* Estilos generales */
+// home.page.scss
 ion-content {
-  --background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-/* Estilos para la toolbar */
+ion-card {
+  margin: 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+ion-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+ion-card-content {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+ion-button {
+  margin: 8px 0;
+  border-radius: 12px;
+  height: 56px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
 ion-toolbar {
-  --background: #2c3e50; /* Color primary más oscuro */
-  --color: white;
+  --background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
   
   ion-title {
-    font-weight: 600;
+    font-weight: bold;
+    font-size: 1.3rem;
     letter-spacing: 1px;
   }
 }
 
-/* Estilos para la tarjeta de bienvenida */
-ion-card {
-  --background: rgba(255, 255, 255, 0.9);
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  margin: 0;
-  
-  ion-card-header {
-    padding-bottom: 0;
-  }
-  
-  ion-card-title {
-    color: #2c3e50;
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-  
-  ion-card-content {
-    color: #7f8c8d;
-    font-size: 1rem;
-    padding-top: 8px;
-  }
+.ion-margin-top {
+  margin-top: 16px !important;
 }
 
-/* Estilos para los botones */
+// Animaciones
+ion-card {
+  animation: slideInUp 0.6s ease-out;
+}
+
 ion-button {
-  --border-radius: 12px;
-  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  --padding-top: 20px;
-  --padding-bottom: 20px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
   
-  &:active {
-    transform: scale(0.98);
+  &:nth-child(1) {
+    animation-delay: 0.2s;
   }
   
-  &[color="success"] {
-    --background: #27ae60;
-    --background-hover: #2ecc71;
-    --background-activated: #2ecc71;
-  }
-  
-  &[color="tertiary"] {
-    --background: #3498db;
-    --background-hover: #2980b9;
-    --background-activated: #2980b9;
+  &:nth-child(2) {
+    animation-delay: 0.4s;
   }
 }
 
-/* Estilos para el grid */
-ion-grid {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Efecto hover para dispositivos con mouse */
-@media (hover: hover) {
-  ion-button:hover {
-    --box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px);
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-}
-
-/* Animación de entrada */
-ion-card {
-  animation: fadeInUp 0.5s ease-out;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInUp {
@@ -97,11 +92,30 @@ ion-card {
   }
 }
 
-/* Estilo para los emojis en los botones */
-ion-button {
-  ion-icon {
-    margin-right: 8px;
-    font-size: 1.2em;
-    vertical-align: middle;
+// Responsive design
+@media (min-width: 768px) {
+  ion-card {
+    max-width: 600px;
+    margin: 24px auto;
+  }
+  
+  ion-button {
+    max-width: 400px;
+    margin: 12px auto;
+  }
+}
+
+// Estilo para modo oscuro
+@media (prefers-color-scheme: dark) {
+  ion-card {
+    background: rgba(45, 52, 66, 0.9);
+    
+    ion-card-title {
+      color: #ecf0f1;
+    }
+    
+    ion-card-content {
+      color: #bdc3c7;
+    }
   }
 }
