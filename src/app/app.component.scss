@@ -1,10 +1,79 @@
-/* Estilos globales */
-ion-button {
-  margin-top: 16px;
+:host {
+  --ion-text-color: #ffffff;
 }
 
-#container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+ion-content {
+  /* Fondo con degradado animado */
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1e3c72);
+  background-size: 400% 400%;
+  animation: animatedGradient 15s ease infinite;
+  color: var(--ion-text-color);
+}
+
+/* Header */
+ion-toolbar {
+  --background: transparent;
+  --color: white;
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Tarjeta estilo glassmorphism */
+ion-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease;
+}
+
+/* Tipografía y botones */
+ion-card-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 1px 1px 3px black;
+}
+
+ion-card-content {
+  font-size: 1.1rem;
+  color: #f0f0f0;
+}
+
+ion-button {
+  font-size: 1.1rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ion-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.3);
+}
+
+/* Animaciones */
+@keyframes animatedGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,0 +1,14 @@
+:host {
+  --width: 90%;
+  --height: auto;
+  --border-radius: 16px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+}
+
+ion-content {
+  --background: var(--dark-surface);
+}
+
+img {
+  object-fit: contain;
+}

@@ -1,0 +1,107 @@
+/* Estilos generales */
+ion-content {
+  --background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Estilos para la toolbar */
+ion-toolbar {
+  --background: #2c3e50; /* Color primary más oscuro */
+  --color: white;
+  
+  ion-title {
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+
+/* Estilos para la tarjeta de bienvenida */
+ion-card {
+  --background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  
+  ion-card-header {
+    padding-bottom: 0;
+  }
+  
+  ion-card-title {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  ion-card-content {
+    color: #7f8c8d;
+    font-size: 1rem;
+    padding-top: 8px;
+  }
+}
+
+/* Estilos para los botones */
+ion-button {
+  --border-radius: 12px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:active {
+    transform: scale(0.98);
+  }
+  
+  &[color="success"] {
+    --background: #27ae60;
+    --background-hover: #2ecc71;
+    --background-activated: #2ecc71;
+  }
+  
+  &[color="tertiary"] {
+    --background: #3498db;
+    --background-hover: #2980b9;
+    --background-activated: #2980b9;
+  }
+}
+
+/* Estilos para el grid */
+ion-grid {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Efecto hover para dispositivos con mouse */
+@media (hover: hover) {
+  ion-button:hover {
+    --box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+}
+
+/* Animación de entrada */
+ion-card {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para los emojis en los botones */
+ion-button {
+  ion-icon {
+    margin-right: 8px;
+    font-size: 1.2em;
+    vertical-align: middle;
+  }
+}

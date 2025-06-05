@@ -1,25 +1,48 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>UPCA</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">UPCA</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <div id="container">
-    <h2>¡Bienvenido a mi app!</h2>  
-    <ion-button 
-      expand="block" 
-      routerLink="/heroes" 
-      routerDirection="forward">
-      Ver Héroes
-    </ion-button>
-    
-    <ion-button 
-      expand="block" 
-      color="secondary" 
-      routerLink="/nosotros"
-      routerDirection="forward">
-      Sobre Nosotros
-    </ion-button>
-  </div>
+  <ion-grid class="ion-text-center">
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>¡Bienvenido a mi app!</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Selecciona una opción para continuar:
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-margin-top">
+      <ion-col size="12">
+        <ion-button 
+          expand="block" 
+          size="large" 
+          routerLink="/heroes" 
+          routerDirection="forward"
+          color="success">
+          👊 Ver Héroes
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-margin-top">
+      <ion-col size="12">
+        <ion-button 
+          expand="block" 
+          size="large" 
+          color="tertiary" 
+          routerLink="/nosotros"
+          routerDirection="forward">
+          ℹ️ Sobre Nosotros
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
