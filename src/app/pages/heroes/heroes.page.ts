@@ -49,7 +49,7 @@ export class HeroesPage {
   { 
     name: "Mujer Maravilla", 
     power: "Combate y liderazgo",
-    image: "https://upload.wikimedia.org/wikipedia/en/9/9f/Wonder_Woman.jpg"
+    image: "https://www.lanacion.com.ar/resizer/v2/la-inteligencia-artificial-genero-algunas-7P36CDRIIJH5HH4ERTMGDFIXPE.jpg?auth=401963cf7174f4cc6133ed22c02c43ddefa89231815b03193225f1eb89ba040f&width=880&height=586&quality=70&smart=true"
   },
   { 
     name: "Batman", 
